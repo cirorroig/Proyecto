@@ -178,6 +178,50 @@ article div.main-article{
     position: relative;
     padding: 15px;
 }
+main.register form{
+    display: flex;
+    flex-direction: column;
+}
+main.register input.info{
+    border-radius: 2%;
+    border: solid 2px rgb(6, 6, 173);
+    padding: 5px;
+    width: 60%;
+    margin:10px
+}
+main.register div.interests{
+    margin:10px;
+}
+.button-send{
+    color: white;
+    border: solid 2px white;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 15%;
+    transition: 200ms;
+}
+
+.button-clear{
+    color: white;
+    border: solid 2px white;
+    background-color: rgb(6, 6, 173);
+    padding: 5px;
+    border-radius: 15%;
+    transition: 200ms;
+}
+
+.button-clear:hover {
+    color: blue;
+    background-color: white ;
+    border: solid 2px blue;
+}
+
+.button-send:hover{
+    color: rgb(6, 6, 173);
+    background-color: #fff;
+    border: solid 2px rgb(6, 6, 173)
+}
+
 
 @media (min-width: 361px){
     main section article .description{
