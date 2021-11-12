@@ -14,17 +14,18 @@ h3{
 }
 
 p{
-    font-size: 12px;
+    font-size: 16px;
 }
 
 div.top-header{
     display: flex;
-    flex-wrap: wrap;
     padding: 5%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header div.top-header p{
-    width: 100%;
+    width: 70%;
     text-align: center;
     margin-top: 10px;
 }
@@ -34,26 +35,33 @@ header{
 }
 
 header div.logo,
-header .form{
+header form{
     width: 50%;
 }
 
 header div.logo{
     padding: 10px;
 }
-header .form{
+header form{
     display: flex;
     align-items: center;
     padding: 2px;
     font-size: 11px;
+    flex-wrap: wrap;
 }
 header nav{
     font-size: 12px;
-    margin-left: 20px;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: space-between;
 }
-
+header ul {
+    display: flex;
+}
 header ul li{
     list-style-type: none;
+    font-size: 18px;
+    margin:2px;
 }
 
 header ul li a{
@@ -61,19 +69,25 @@ header ul li a{
     color: #000;
 }
 
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
+header form input.search{
+    border:transparent;
+    border-radius: 2%;
+    padding: 5px;
+    width: 85%;
+}
+header form input.search:focus{
+    border-color: -internal#1259C3;
 }
 
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
+header form button.submit{
+    border:none;
+    border-radius: 2%;
+    padding: 5px;
+    width: 15%;
+    background-color: #fff;
+}
+header form .submit i{
+    width: 100%;
 }
 
 div.burger-menu{
@@ -104,6 +118,8 @@ div.offers{
 
 .discount{
     width: 70%;
+    position: relative;
+    left:20px
 }
 
 .discount,
@@ -115,6 +131,9 @@ div.offers{
 h3,
 .description{
     color: #666;
+}
+.main-article{
+    flex-wrap: wrap;
 }
 .main-article h4.description{
     display: none;
@@ -160,6 +179,7 @@ main section article i{
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: 200ms;
 }
 .main-article:hover i{
    transform:rotate(-90deg);
@@ -181,53 +201,134 @@ article div.main-article{
 main.register form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
 }
-main.register input.info{
-    border-radius: 2%;
-    border: solid 2px rgb(6, 6, 173);
-    padding: 5px;
-    width: 60%;
-    margin:10px
+main.register div.data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;  
+}
+main.register div.data h1{
+    color:#1259C3;
+}
+main.register input:focus{
+    border-color:#1259C3;
 }
 main.register div.interests{
+    display: flex;
+    flex-direction: column;
     margin:10px;
+    width: 60%;
+    align-content: start;
 }
-.button-send{
+main.register div.picture, .profile{
+    width: 60%;
+}
+main.register div.picture, .profile h4{
+    text-align: left;
+}
+main.register .button-send,.button-clear{
     color: white;
     border: solid 2px white;
-    background-color: blue;
+    background-color: #1259C3;
     padding: 5px;
     border-radius: 15%;
     transition: 200ms;
 }
 
-.button-clear{
-    color: white;
-    border: solid 2px white;
-    background-color: rgb(6, 6, 173);
-    padding: 5px;
-    border-radius: 15%;
-    transition: 200ms;
-}
-
-.button-clear:hover {
-    color: blue;
+main.register .button-clear:hover {
+    color: #1259C3;
     background-color: white ;
-    border: solid 2px blue;
+    border: solid 2px #1259C3;
 }
 
-.button-send:hover{
-    color: rgb(6, 6, 173);
+main.register .button-send:hover{
+    color: #1259C3;
     background-color: #fff;
-    border: solid 2px rgb(6, 6, 173)
+    border: solid 2px #1259C3
+}
+
+main form.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    height: 300px;
+}
+form input.info{
+    border-radius: 2%;
+    border: solid 2px #1259C3;
+    padding: 5px;
+    width: 60%;
+    margin:5px 0px;
+}
+form.login input.info input{
+    margin: 10px;
+}
+form.login h1{
+    margin-bottom: 50px;
+    color:#1259C3;
+}
+form.login .send{
+    color: white;
+    border: solid 2px white;
+    background-color: #1259C3;
+    padding: 5px;
+    border-radius: 15%;
+    transition: 200ms;
+    margin-top: 20px;
+}
+form.login .send:hover{
+     color: #1259C3;
+    background-color: #fff;
+    border: solid 2px #1259C3
+}
+footer{
+    background-color: #fff;
+}
+footer ul div.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer ul{  
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: 10px;
+}
+footer ul p{
+    text-align: center;
+}
+footer ul li{
+    margin: 5px;
+    list-style-type: none;
+}
+footer ul i{
+    margin:10px 0px 0px 0px;
+    font-size: 2em;
+    color:#1259C3;
+    
 }
 
 
-@media (min-width: 361px){
+@media (min-width: 375px){
+    header nav{
+        display: none;
+    }
+    div.top-header{
+        display: flex;
+        flex-wrap: wrap;
+    }
     main section article .description{
         display: block;
     }
-
+    
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
@@ -241,17 +342,58 @@ main.register div.interests{
     }
     
     main section div.products article{
-        width: 45%;
+        width: 100%;
     }
 
     .price,
     .discount{
         width: 50%;
+        
     }
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
+    div.top-header{
+        display: flex;
+        padding: 5%;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    header nav{
+        display: flex;
+        padding: 0px 0px 15px 0px;
+    }
+    header form {
+        display: flex;
+        justify-content: center;
+    }
+    div.burger-menu{
+        display: none;
+    }
+    main section div.products article{
+        width: 45%;
+    }
+   
+}
+@media (min-width: 1024px){
     main section div.products article{
         width: 22%;
+    }
+    footer ul{  
+        display: flex;
+        flex-direction: row;
+    }
+    footer ul div.information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer ul i{
+        transition:100ms
+    }
+    footer ul i:hover{
+        color:#39b54a;
     }
 }
