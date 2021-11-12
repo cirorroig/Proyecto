@@ -265,6 +265,11 @@ form input.info{
     padding: 5px;
     width: 60%;
     margin:5px 0px;
+
+}
+form label.info{
+    width: 60%;
+    text-align: left;
 }
 form.login input.info input{
     margin: 10px;
